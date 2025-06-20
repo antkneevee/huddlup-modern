@@ -1,24 +1,21 @@
-
+// src/App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import PlayEditor from './PlayEditor';
-import Home from './Home';
-import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PlayEditor from '@/pages/PlayEditor';
+import About from '@/pages/About';
+import NotFound from '@/pages/NotFound';
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <div className="flex h-screen bg-gray-100">
-        <Sidebar />
-        <main className="flex-1 overflow-y-auto">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/editor" element={<PlayEditor />} />
-          </Routes>
-        </main>
-      </div>
+      <Routes>
+        <Route path="/" element={<PlayEditor />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
-}
+};
 
 export default App;
+
