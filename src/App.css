@@ -1,0 +1,69 @@
+/* App.css */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  overflow: visible; /* Allow modals and fixed overlays to render on top */
+}
+
+/* Logo styles (from your previous file) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Spinning animation (from your previous file) */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styles */
+.card {
+  padding: 2em;
+}
+
+/* Additional classes */
+.read-the-docs {
+  color: #888;
+}
+
+/* Recommended addition: General modal and overlay styling */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* ensure modals are always on top */
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}

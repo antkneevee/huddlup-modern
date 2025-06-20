@@ -1,0 +1,39 @@
+@import "tailwindcss";
+.hero {
+  background-color: #000;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+  background-size: 20px 20px;
+}
+
+/* Print styling */
+.no-print {
+  display: none !important;
+}
+
+/* Utility to hide scrollbars while keeping scroll ability */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+@media print {
+  header,
+  .modal,
+  .no-print {
+    display: none !important;
+  }
+
+  body.print-ready {
+    margin: 0;
+    padding: 0;
+  }
+}
