@@ -1,9 +1,9 @@
 // src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PlayEditor from '@/pages/PlayEditor';
+import PlayEditor from '@/PlayEditor';
 import About from '@/pages/About';
-import NotFound from '@/pages/NotFound';
+
 
 const App = () => {
   return (
